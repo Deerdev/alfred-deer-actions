@@ -1,0 +1,20 @@
+{
+  // 设置全部语言在保存时自动格式化
+  "editor.formatOnSave": true,
+  // 设置全部语言的默认格式化程序为prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript|typescript]": {
+    // 设置特定语言在保存时自动格式化
+    "editor.formatOnSave": true,
+    // 设置特定语言的默认格式化程序为prettier
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // 保存时自动修复
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}

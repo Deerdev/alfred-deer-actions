@@ -1,11 +1,8 @@
 import alfy from 'alfy';
 import * as path from 'path';
 import * as process from 'child_process';
+import { outputOk, outputErr } from './utils.js'
 
-function outputResult(result) {
-  // using console to direct output string result
-  console.log(result);
-}
 
 async function runTask() {
   const scriptPath = alfy.input;
@@ -16,7 +13,8 @@ async function runTask() {
     case '.py':
       scriptCmd = `python3 ${scriptPath}`;
       break;
-
+    case '.js':
+      scriptCmd = `node ${scriptPath}`
     default:
       break;
   }
@@ -24,18 +22,18 @@ async function runTask() {
     try {
       process.exec(scriptCmd, (err, stdout, stderr) => {
         if (err) {
-          outputResult(`error: ${err}`);
+          outputErr(err);
         } else if (stderr) {
-          outputResult(`error: ${stderr}`);
+          outputErr(stderr);
         } else {
-          outputResult(stdout);
+          outputOk(stdout);
         }
       });
     } catch (error) {
-      outputResult(`error: ${error}`);
+      outputErr(error);
     }
   } else {
-    outputResult(`error: not support this script ${scriptName}`);
+    outputErr(`not support this script ${scriptName}`);
   }
 }
 

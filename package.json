@@ -55,6 +55,8 @@
     }
   },
   "dependencies": {
-    "alfy": "^0.12.2"
+    "@notionhq/client": "^2.2.1",
+    "alfy": "^0.12.2",
+    "minimist": "^1.2.7"
   }
 }

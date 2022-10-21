@@ -364,27 +364,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:split3}</string>
-				<key>title</key>
-				<string>Action Success</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>D9D160BA-31F0-4194-97DF-BD9F1DE13AB1</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>delimiter</key>
 				<string>,</string>
 				<key>discardemptyarguments</key>
@@ -400,6 +379,27 @@
 			<string>alfred.workflow.utility.split</string>
 			<key>uid</key>
 			<string>27F39127-FE2C-4322-A4C8-D162BD2293BF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:split3}</string>
+				<key>title</key>
+				<string>Action Success</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>D9D160BA-31F0-4194-97DF-BD9F1DE13AB1</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -542,7 +542,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
@@ -558,32 +558,12 @@
 				<key>title</key>
 				<string>choose task type</string>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
 			<string>33DD1ABB-C740-4DC6-922E-1922BF532861</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>task</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>F33AAF4B-D523-4475-A36F-C54CA737D3C4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -604,6 +584,26 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>775536DF-3CED-4194-919C-75D182582F0E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>task</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>F33AAF4B-D523-4475-A36F-C54CA737D3C4</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -659,9 +659,9 @@
 		<key>08606698-4736-40A4-8FB8-25C7C5D4C4C7</key>
 		<dict>
 			<key>xpos</key>
-			<real>145</real>
+			<real>510</real>
 			<key>ypos</key>
-			<real>1000</real>
+			<real>1005</real>
 		</dict>
 		<key>27F39127-FE2C-4322-A4C8-D162BD2293BF</key>
 		<dict>
@@ -750,9 +750,9 @@
 		<key>D7DB295B-BFF6-4E7D-ADE9-1A59FEAC1DC7</key>
 		<dict>
 			<key>xpos</key>
-			<real>510</real>
+			<real>880</real>
 			<key>ypos</key>
-			<real>985</real>
+			<real>1000</real>
 		</dict>
 		<key>D9D160BA-31F0-4194-97DF-BD9F1DE13AB1</key>
 		<dict>
@@ -786,6 +786,7 @@
 	<array>
 		<string>NOTION_KEY</string>
 		<string>action_tasks_dir</string>
+		<string>NOTION_DATABASE_ID</string>
 	</array>
 	<key>version</key>
 	<string>1.0.0</string>

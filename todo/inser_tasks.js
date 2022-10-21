@@ -65,7 +65,7 @@ async function runTask() {
     })
     outputOk(constructTextMsg('create success!'))
   } catch (error) {
-    outputErr(error.body)
+    outputErr(error.body + `: ${task} ${taskTag}`)
   }
 }
 
